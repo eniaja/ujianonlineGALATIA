@@ -1,1 +1,205 @@
+<!DOCTYPE html>
 
+<html lang="id"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ujian Online Informatika</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- =========================
+     HALAMAN LOGIN
+========================== -->
+
+<div id="loginPage" class="page">
+
+    <div class="box">
+
+        <h1>UJIAN ONLINE</h1>
+
+        <p class="subjudul">
+            Ujian Informatika
+        </p>
+
+        <label for="nama">Nama Siswa</label>
+
+        <input
+            type="text"
+            id="nama"
+            placeholder="Masukkan nama"
+            autocomplete="off"
+        >
+
+        <label for="kelas">Kelas</label>
+
+        <select id="kelas">
+            <option value="">-- Pilih Kelas --</option>
+            <option value="X">X</option>
+            <option value="XI">XI</option>
+            <option value="XII">XII</option>
+        </select>
+
+        <label for="password">Password Siswa</label>
+
+        <input
+            type="password"
+            id="password"
+            placeholder="Masukkan password"
+            autocomplete="off"
+            name="student-password"
+        >
+
+        <button id="loginButton">
+            LOGIN
+        </button>
+
+        <p id="loginMessage" class="message"></p>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     HALAMAN UJIAN
+========================== -->
+
+<div id="examPage" class="page hidden">
+
+    <header>
+
+        <div>
+            <h2>UJIAN INFORMATIKA</h2>
+
+            <p id="studentInfo"></p>
+        </div>
+
+        <div class="timer-box">
+
+            <span>WAKTU</span>
+
+            <strong id="timer">
+                30:00
+            </strong>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <div class="peringatan">
+
+            ⚠️ Jangan pindah tab atau meninggalkan
+            halaman ujian.
+
+            <br>
+
+            Jika terdeteksi, ujian akan terkunci.
+
+        </div>
+
+
+        <form id="examForm">
+
+            <div id="questions"></div>
+
+            <button
+                type="button"
+                id="submitButton"
+                class="submit"
+            >
+                KUMPULKAN JAWABAN
+            </button>
+
+        </form>
+
+    </main>
+
+</div>
+
+
+<!-- =========================
+     HALAMAN TERKUNCI
+========================== -->
+
+<!-- =========================
+     HALAMAN TERKUNCI
+========================= -->
+
+<div id="lockPage" class="page hidden">
+
+    <div class="box lock-box">
+
+        <div class="lock-icon">
+            🔒
+        </div>
+
+        <h1>UJIAN TERKUNCI</h1>
+
+        <p id="lockReason">
+            Ujian terkunci.
+        </p>
+
+        <p>
+            Akun siswa ini sudah terkunci.
+            Untuk melanjutkan ujian, masukkan password administrator.
+        </p>
+
+        <label for="adminPassword">
+            Password Administrator
+        </label>
+
+        <input
+            type="password"
+            id="adminPassword"
+            placeholder="Masukkan password admin"
+            autocomplete="new-password"
+            name="admin-password"
+        >
+
+        <button
+            type="button"
+            id="adminButton"
+        >
+            BUKA UJIAN
+        </button>
+
+        <p
+            id="adminMessage"
+            class="message"
+        ></p>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     HALAMAN SELESAI
+========================== -->
+
+<div id="finishPage" class="page hidden">
+
+    <div class="box finish-box">
+
+        <div class="success">
+            ✓
+        </div>
+
+        <h1>UJIAN SELESAI</h1>
+
+        <p id="result"></p>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body> </html>
